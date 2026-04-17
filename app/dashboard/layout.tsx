@@ -26,10 +26,10 @@ export default function DashboardLayout({
       <div className="lg:hidden fixed top-0 left-0 w-full h-20 bg-[#0d0d0d]/90 backdrop-blur-md border-b border-white/5 z-30 flex items-center justify-between px-6">
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-blue-600/20">L</div>
-          <span className="text-sm font-black text-white tracking-tight leading-tight">Library <br/><span className="text-blue-500">System</span></span>
+          <span className="text-sm font-black text-white tracking-tight leading-tight">Library <br /><span className="text-blue-500">System</span></span>
         </div>
-        <button 
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} 
+        <button
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           className="w-10 h-10 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center text-white active:scale-95 transition-all"
         >
           {isMobileMenuOpen ? '✕' : '☰'}
@@ -38,8 +38,8 @@ export default function DashboardLayout({
 
       {/* Overlay */}
       {isMobileMenuOpen && (
-        <div 
-          className="fixed inset-0 bg-black/60 backdrop-blur-sm z-20 lg:hidden transition-opacity" 
+        <div
+          className="fixed inset-0 bg-black/60 backdrop-blur-sm z-20 lg:hidden transition-opacity"
           onClick={() => setIsMobileMenuOpen(false)}
         />
       )}
@@ -49,7 +49,7 @@ export default function DashboardLayout({
         <div className="p-8 hidden lg:block">
           <div className="flex items-center gap-3 mb-10">
             <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-blue-600/20">L</div>
-            <span className="text-sm font-black text-white tracking-tight leading-tight">Library <br/><span className="text-blue-500">Management System</span></span>
+            <span className="text-sm font-black text-white tracking-tight leading-tight">Library <br /><span className="text-blue-500">Management System</span></span>
           </div>
         </div>
 
@@ -68,9 +68,9 @@ export default function DashboardLayout({
                   key={item.name}
                   href={item.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className={`flex items-center gap-3 px-4 py-3.5 rounded-2xl transition-all font-bold text-sm tracking-tight ${isActive
-                      ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/20'
-                      : 'hover:bg-white/[0.05] hover:text-white'
+                  className={`flex items-center gap-3 px-3.5 py-3.5 rounded-2xl transition-all font-bold text-sm tracking-tight ${isActive
+                    ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/20'
+                    : 'hover:bg-white/[0.05] hover:text-white'
                     }`}
                 >
                   <span className="text-xl">{item.icon}</span>
@@ -81,17 +81,17 @@ export default function DashboardLayout({
           </nav>
         </div>
 
-        <div className="mt-auto p-8 border-t border-white/5 space-y-4">
+        <div className="mt-auto p-4 border-t border-white/5 space-y-0">
           <button
             onClick={() => signOut({ callbackUrl: '/' })}
-            className="flex w-full items-center gap-3 px-4 py-3 rounded-2xl text-red-400 hover:bg-red-500/10 transition-colors font-bold text-sm tracking-tight"
+            className="flex w-full items-center gap-4 px-4 py-4 rounded-2xl text-red-400 hover:bg-red-500/10 transition-colors font-bold text-sm tracking-tight"
           >
-            <span>🚪</span>
+            <span className="block text-center text-red-400">🚪</span>
             Logout
           </button>
-          <div className="text-[10px] font-medium text-zinc-500 text-center uppercase tracking-widest leading-relaxed pt-4 border-t border-white/5 hidden lg:block">
-            Designed & Developed by <br/>
-            <span className="text-zinc-400 font-bold">Minku Singh</span><br/>
+          <div className="text-[10px] font-medium text-zinc-500 text-center uppercase tracking-widest leading-relaxed pt-1 border-t border-white/5 hidden lg:block">
+            Designed & Developed by <br />
+            <span className="text-zinc-400 font-bold">Minku Singh</span><br />
             23155134013
           </div>
         </div>

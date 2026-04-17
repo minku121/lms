@@ -7,15 +7,15 @@ export async function GET() {
     // Total Books
     const [books] = await db.query('SELECT COUNT(*) as total, SUM(stock) as stock, SUM(available) as available FROM books');
     const bookRows = books as RowDataPacket[];
-    
+
     // Total Students
     const [students] = await db.query('SELECT COUNT(*) as total FROM students');
     const studentRows = students as RowDataPacket[];
-    
+
     // Total Issued Books
     const [issued] = await db.query("SELECT COUNT(*) as total FROM issues WHERE status = 'issued'");
     const issuedRows = issued as RowDataPacket[];
-    
+
     // Overdue Books (where due_date < current_date and status is issued)
     const [overdue] = await db.query("SELECT COUNT(*) as total FROM issues WHERE status = 'issued' AND due_date < CURDATE()");
     const overdueRows = overdue as RowDataPacket[];

@@ -14,7 +14,22 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Library Management System",
-  description: "Library Management System Developed By Minku Singh (23155134013)",
+  description: "A modern, secure, and responsive Library Management System developed by Minku Singh (23155134013).",
+  keywords: ["Library Management System", "LMS", "Book Circulation", "Student Registry", "Next.js"],
+  authors: [{ name: "Minku Singh" }],
+  openGraph: {
+    title: "Library Management System | Minku Singh",
+    description: "A modern, secure, and responsive Library Management System. Manage books, students, and circulation seamlessly.",
+    url: "https://lms-ia2k.vercel.app/",
+    siteName: "LMS by Minku Singh",
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Library Management System",
+    description: "A modern, secure, and responsive Library Management System. Manage books, students, and circulation seamlessly.",
+  },
 };
 
 export default function RootLayout({

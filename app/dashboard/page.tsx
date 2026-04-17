@@ -51,7 +51,7 @@ export default function DashboardOverview() {
       <header className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
         <div>
           <h1 className="text-4xl font-black text-white tracking-tight mb-2">Overview</h1>
-          <p className="text-zinc-500 font-medium uppercase tracking-widest text-xs">Real-time system health & analytics</p>
+          <p className="text-zinc-500 font-medium uppercase tracking-widest text-xs">Real Time Stats Of Library Management System</p>
         </div>
         <div className="flex gap-4">
           <div className="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-xs font-bold text-zinc-400 uppercase tracking-widest flex items-center gap-2">
@@ -88,8 +88,8 @@ export default function DashboardOverview() {
                     {activity.type}
                   </div>
                   <div className="text-[10px] font-bold text-zinc-600 uppercase tracking-widest">
-                    {activity.type === 'issued' 
-                      ? new Date(activity.issue_date).toLocaleDateString() 
+                    {activity.type === 'issued'
+                      ? new Date(activity.issue_date).toLocaleDateString()
                       : new Date(activity.return_date!).toLocaleDateString()}
                   </div>
                 </div>
@@ -135,8 +135,8 @@ function HealthIndicator({ label, percentage, color }: { label: string; percenta
         <span className="text-xs font-black text-white">{percentage}%</span>
       </div>
       <div className="h-2 w-full bg-white/5 rounded-full overflow-hidden">
-        <div 
-          className={`h-full ${color} transition-all duration-1000 shadow-[0_0_15px_rgba(37,99,235,0.3)]`} 
+        <div
+          className={`h-full ${color} transition-all duration-1000 shadow-[0_0_15px_rgba(37,99,235,0.3)]`}
           style={{ width: `${percentage}%` }}
         ></div>
       </div>

@@ -163,22 +163,22 @@ export default function IssueManagement() {
 
   return (
     <div className="space-y-12">
-      <header className="flex items-center justify-between">
+      <header className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
         <div>
           <h1 className="text-4xl font-black text-white tracking-tight mb-2">Circulation</h1>
           <p className="text-zinc-500 font-medium uppercase tracking-widest text-xs">Track book issues and returns</p>
         </div>
         <button 
           onClick={() => setShowIssueModal(true)}
-          className="px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-2xl shadow-lg shadow-blue-600/20 transition-all active:scale-95 flex items-center gap-2"
+          className="px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-2xl shadow-lg shadow-blue-600/20 transition-all active:scale-95 flex items-center gap-2 w-full md:w-auto justify-center"
         >
           <span className="text-xl">🔄</span> Issue Book
         </button>
       </header>
 
       {/* Circulation Table */}
-      <div className="bg-white/[0.03] border border-white/10 rounded-[2.5rem] overflow-hidden">
-        <table className="w-full text-left">
+      <div className="bg-white/[0.03] border border-white/10 rounded-[2.5rem] overflow-hidden overflow-x-auto">
+        <table className="w-full text-left min-w-[800px]">
           <thead>
             <tr className="border-b border-white/5 bg-white/[0.02]">
               <th className="px-8 py-6 text-xs font-black text-zinc-500 uppercase tracking-[0.2em]">Book & Student</th>

@@ -48,7 +48,7 @@ export default function DashboardOverview() {
 
   return (
     <div className="space-y-12">
-      <header className="flex items-center justify-between">
+      <header className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
         <div>
           <h1 className="text-4xl font-black text-white tracking-tight mb-2">Overview</h1>
           <p className="text-zinc-500 font-medium uppercase tracking-widest text-xs">Real-time system health & analytics</p>
